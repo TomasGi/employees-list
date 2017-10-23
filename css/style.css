@@ -1,0 +1,149 @@
+body {
+  background: #E1E2E1;
+  padding: 0;
+  margin: 0; }
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px; }
+
+.line {
+  width: 100%;
+  height: 10px;
+  background: #002171; }
+
+.section-employees {
+  margin: 100px auto;
+  transition: .4s;
+  width: 1200px; }
+  @media (max-width: 1200px) {
+    .section-employees {
+      width: 900px; } }
+  @media (max-width: 900px) {
+    .section-employees {
+      width: 600px; } }
+  @media (max-width: 599px) {
+    .section-employees {
+      width: initial;
+      text-align: center; } }
+  .section-employees .person {
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+    width: 257px;
+    height: 380px;
+    overflow: hidden;
+    transition: .4s;
+    padding: 10px;
+    background: #353636;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.3); }
+    .section-employees .person:hover {
+      transition: .4s; }
+      .section-employees .person:hover .shadow {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        animation: darken .4s ease-in 50ms forwards;
+        z-index: 1; }
+      .section-employees .person:hover .inside-person span:nth-child(1) {
+        transition: .3s;
+        transform: translateY(0%); }
+      .section-employees .person:hover .inside-person span:nth-child(2) {
+        transition: .3s;
+        transform: translateX(0%); }
+      .section-employees .person:hover .inside-person span:nth-child(3) {
+        animation: load-social 0.2s ease-in 300ms forwards; }
+      .section-employees .person:hover .inside-person span:nth-child(4) {
+        animation: load-social 0.2s ease-in 400ms forwards; }
+      .section-employees .person:hover .inside-person span:nth-child(5) {
+        animation: load-social 0.2s ease-in 500ms forwards; }
+    .section-employees .person img {
+      transition: .4s;
+      height: 100%;
+      width: 257px; }
+    .section-employees .person .shadow {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      border: 0px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      z-index: 1; }
+    .section-employees .person .inside-person {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      text-align: center; }
+      .section-employees .person .inside-person span {
+        text-align: center;
+        box-sizing: border-box;
+        width: 50px;
+        height: 50px;
+        padding: 8px 12px;
+        color: #fff;
+        text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+        background-color: #353636;
+        box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        margin: 5px;
+        margin-top: 50%;
+        font-size: 30px;
+        display: inline-block;
+        transform: translateY(500%); }
+        .section-employees .person .inside-person span:nth-child(1) {
+          display: block;
+          font-family: Arial, Helvetica, sans-serif;
+          border-radius: initial;
+          width: initial;
+          height: initial;
+          margin: 0;
+          padding: 5px;
+          transition: .3s;
+          transform: translateY(-100%); }
+        .section-employees .person .inside-person span:nth-child(2) {
+          display: block;
+          font-family: Arial, Helvetica, sans-serif;
+          border-radius: initial;
+          width: fit-content;
+          height: initial;
+          margin: 0;
+          padding: 5px 15px;
+          font-weight: 700;
+          font-size: 14px;
+          transition: .3s;
+          text-align: left;
+          transform: translateX(-100%);
+          background: #2d2d2d; }
+        .section-employees .person .inside-person span:nth-child(3) {
+          background: #3b5998; }
+        .section-employees .person .inside-person span:nth-child(4) {
+          background: #007bb6; }
+        .section-employees .person .inside-person span:nth-child(5) {
+          background: #e4405f; }
+@keyframes load-social {
+  0% {
+    transform: translateY(500%); }
+  60% {
+    transform: translateY(-50%); }
+  90% {
+    transform: translateY(50%); }
+  100% {
+    transform: translateY(0%); } }
+@keyframes darken {
+  0% {
+    opacity: 0;
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.3); }
+  100% {
+    opacity: 1;
+    box-shadow: 0px 0px 20px 300px rgba(255, 255, 255, 0.3); } }
+
+/*# sourceMappingURL=style.css.map */
